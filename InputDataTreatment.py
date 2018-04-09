@@ -3,7 +3,7 @@ SIM_LENGTH = 50    # length of simulation (years)
 ALPHA = 0.05        # significance level for calculating confidence intervals
 DISCOUNT = 0.0     # annual discount rate
 
-ADD_BACKGROUND_MORT = False  # if background mortality should be added
+ADD_BACKGROUND_MORT = True  # if background mortality should be added
 DELTA_T = 1       # years. I did not change this
 
 PSA_ON = False      # if probabilistic sensitivity analysis is on
@@ -11,7 +11,7 @@ PSA_ON = False      # if probabilistic sensitivity analysis is on
 TRANS_MATRIX = [
     [0.75,    0.15,    0,       0.1],   #Well
     [0,      0,      1,       0],    #Stroke
-    [0.0000,      0.1625,  0.6275,   0.2100],
+    [0.0000,      0.1625,  0.701,   0.1365],
     [0,      0,      0,       1],#.65*.25 .2*1.05
 ]
 

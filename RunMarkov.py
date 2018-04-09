@@ -4,13 +4,13 @@ import HW9MarkovClasses as Cls
 import ParameterClassesTreatment as Ptreatment
 
 # print the outcomes of this simulated cohort
-#print("Problem 3")
-#cohort = Cls.Cohort(
-#    id=0,
-#    therapy=P.Therapies.NOTREATMENT)
+print("Problem 3")
+cohort = Cls.Cohort(
+    id=0,
+    therapy=P.Therapies.NOTREATMENT)
 
-ProbMatrix = P.calculate_prob_matrix()
-print(ProbMatrix)
+#ProbMatrix = P.calculate_prob_matrix()
+#print(ProbMatrix)
 #P.add_background_mortality(ProbMatrix)
 
 # simulate the cohort
@@ -18,13 +18,13 @@ simOutputs = cohort.simulate()
 SupportMarkov.print_outcomes(simOutputs, 'No Treatment')
 
 
-
 print("Problem 4")
 
-ProbMatrixAntiCoag=Ptreatment.calculate_prob_matrix()
-print(ProbMatrixAntiCoag)
-
-
+print("TRANS_MATRIX = [    [0.75,    0.15,    0,       0.1],   #Well",
+   " [0,      0,      1,       0],    #Stroke",
+   " [0.0000,      0.1625,  0.701,   0.1365],",
+   " [0,      0,      0,       1],#.65*.25 .2*1.05 ",
+    "]")
 
 
 print("Problem 5")
@@ -35,9 +35,6 @@ cohort2 = Cls.Cohort(
 # simulate the cohort
 simOutputs2 = cohort2.simulate()
 SupportMarkov.print_outcomes(simOutputs2, 'Anticoagulation Treatment')
-
-
-
 
 
 print("Problem 6")
