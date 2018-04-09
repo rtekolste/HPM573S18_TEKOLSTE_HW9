@@ -271,6 +271,7 @@ class CohortOutputs:
         self._sumStat_cost = StatCls.SummaryStat('Patient discounted cost', self._costs)
         self._sumStat_utility = StatCls.SummaryStat('Patient discounted utility', self._utilities)
         self._sumStat_strokes = StatCls.SummaryStat('Patient strokes', self._numbersofstrokes)
+        self._sumStat_timeToStroke = StatCls.SummaryStat('Patient strokes', self._times_to_stroke)
 
     def get_survival_times(self):
         return self._survivalTimes
@@ -287,11 +288,11 @@ class CohortOutputs:
     def get_sumStat_survival_times(self):
         return self._sumStat_survivalTime
 
-    def get_sumState_strokes(self):
+    def get_sumStat_strokes(self):
         return self._sumStat_strokes
 
     def get_sumStat_time_to_stroke(self):
-        return self._sumState_timeToStroke
+        return self._sumStat_timeToStroke
 
     def get_sumStat_discounted_cost(self):
         return self._sumStat_cost

@@ -2,6 +2,7 @@ import ParameterClasses as P
 import SupportMarkov as SupportMarkov
 import HW9MarkovClasses as Cls
 import ParameterClassesTreatment as Ptreatment
+import scr as Stat
 
 # print the outcomes of this simulated cohort
 print("Problem 3")
@@ -30,7 +31,7 @@ print("TRANS_MATRIX = [    [0.75,    0.15,    0,       0.1],   #Well",
 print("Problem 5")
 cohort2 = Cls.Cohort(
     id=1,
-    therapy=P.Therapies.ANTICOAG)
+    therapy=Ptreatment.Therapies.ANTICOAG)
 
 # simulate the cohort
 simOutputs2 = cohort2.simulate()
@@ -45,6 +46,6 @@ SupportMarkov.draw_survival_curves_and_histograms(simOutputs_none=simOutputs, si
 
 
 print("Problem 7")
-simOutputs.print_mean_stroke_outcomes(therapyName="No Therapy")
-simOutputs2.print_mean_stroke_outcomes(therapyName="Anticoagulation Therapy")
+SupportMarkov.print_mean_stroke_outcomes(simOutputs, therapyName="No Therapy")
+SupportMarkov.print_mean_stroke_outcomes(simOutputs2, therapyName="Anticoagulation Therapy")
 SupportMarkov.draw_stroke_histograms(simOutputs_none=simOutputs, simOutputs_anticoag=simOutputs2)

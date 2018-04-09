@@ -51,8 +51,8 @@ def print_outcomes(simOutput, therapy_name):
 
 def print_mean_stroke_outcomes(simOutput, therapyName):
     mean_strokes_CI_text = F.format_estimate_interval(
-        estimate=simOutput.get_sumStat_strokes.get_mean(),
-        interval=simOutput.get_sumStat_strokes.get_t_CI(alpha=Settings.ALPHA),
+        estimate=simOutput.get_sumStat_strokes().get_mean(),
+        interval=simOutput.get_sumStat_strokes().get_t_CI(alpha=Settings.ALPHA),
         deci=2)
 
     print("  Estimate of mean number of strokes and {:.{prec}%} confidence interval:".format(1 - Data.ALPHA, prec=0),

@@ -11,8 +11,8 @@ PSA_ON = False      # if probabilistic sensitivity analysis is on
 TRANS_MATRIX = [
     [0.75,    0.15,    0,       0.1],   #Well
     [0,      0,      1,       0],    #Stroke
-    [0.0000,      0.1625,  0.701,   0.1365],
-    [0,      0,      0,       1],#.65*.25 .2*1.05
+    [0.0000,      0.1625,  0.701,   0.1365], #Post-Stroke #.65*.25 .2*1.05
+    [0,      0,      0,       1], #Dead
 ]
 
 # annual cost of each health state - No data yet
